@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ImgBg from "../../assets/img/home-bg.jpg"
 import Header from "../template/header";
+
+const ImgBg = "https://plast-asset.s3.amazonaws.com/earth-surrounded-by-coronavirus-microbes.jpg"
 
 class HomePage extends Component {
   render() {

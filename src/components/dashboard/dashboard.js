@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import cookie from 'react-cookies';
 import { protectedTest } from '../../actions/auth';
 import Header from "../template/header";
-import Imgbg from "../../assets/img/home-bg.jpg"
+
+const ImgBg = "https://plast-asset.s3.amazonaws.com/earth-surrounded-by-coronavirus-microbes.jpg"
 
 class Dashboard extends Component {
 
@@ -18,7 +17,7 @@ class Dashboard extends Component {
     return (
       <React.Fragment>
         <Header />
-        <div className="dashboard" style={{backgroundImage: `url(${Imgbg})`}}>
+        <div className="dashboard" style={{backgroundImage: `url(${ImgBg})`}}>
           <div className="dashboard-title">
             <h2>Welcome, you are logged in</h2>
           </div>

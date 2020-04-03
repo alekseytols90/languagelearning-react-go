@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import ImgBg from "../../assets/img/home-bg.jpg"
 import ImgFt from "../../assets/img/ft.jpg"
 import ImgHack from "../../assets/img/hack.jpg"
 import { Row, Col } from "reactstrap"
