@@ -16,6 +16,7 @@ import Login from "./containers/auth/login";
 import Logout from "./containers/auth/logout";
 import ForgotPassword from "./containers/auth/forgot_password";
 import ResetPassword from "./containers/auth/reset_password";
+import QRRegister from "./containers/auth/qr_register";
 
 // Import dashboard pages
 import Dashboard from "./containers/dashboard";
@@ -49,7 +50,8 @@ const Routes = () => (
       <Route path="/logout" component={Logout} />
       <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/reset-password/:resetToken" component={ResetPassword} />
-
+      <Route path="/QRregister" component={QRRegister} />
+      
       <Route path="/organization/:id" component={Organization} />
 
       <Route path="/checkout/:plan" component={RequireAuth(InitialCheckout)} />

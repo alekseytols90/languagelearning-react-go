@@ -87,7 +87,7 @@ class Organization extends Component {
       <React.Fragment>
         <Header />
         <div className="homepage">
-          <div className="hompage-title p-2 mb-5">
+          <div className="hompage-title mt-4 p-2 mb-5">
             <h4>Organization Home Page</h4>
           </div>
           <Mark orgLogo={orgLogo} orgName={curOrg.org_name} />
