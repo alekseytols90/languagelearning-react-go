@@ -151,7 +151,7 @@ class RegisterOrg extends Component {
 
 function mapStateToProps(state) {
   return {
-    errorMessage: state.auth.error,
+    errorMessage: state.organization.error,
     message: state.auth.message,
     authenticated: state.auth.authenticated
   };
