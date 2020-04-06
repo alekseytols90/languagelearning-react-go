@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
 
 class AdminDashboard extends Component {
   render() {
-    return (
-      <div>
-        Admin navigation goes here.
-      </div>
-    );
+    return <div>Admin navigation goes here.</div>;
   }
 }
 

@@ -1,6 +1,20 @@
-import { FETCH_CONVERSATIONS, SEND_CONTACT_FORM, SEND_REPLY, START_CONVERSATION, FETCH_SINGLE_CONVERSATION, FETCH_RECIPIENTS, CHAT_ERROR } from '../actions/types';
+import {
+  FETCH_CONVERSATIONS,
+  SEND_CONTACT_FORM,
+  SEND_REPLY,
+  START_CONVERSATION,
+  FETCH_SINGLE_CONVERSATION,
+  FETCH_RECIPIENTS,
+  CHAT_ERROR,
+} from "../actions/types";
 
-const INITIAL_STATE = { conversations: [], message: '', messages: [], recipients: [], error: '' };
+const INITIAL_STATE = {
+  conversations: [],
+  message: "",
+  messages: [],
+  recipients: [],
+  error: "",
+};
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -18,6 +32,8 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, message: action.payload.message };
     case CHAT_ERROR:
       return { ...state, error: action.payload };
+    default:
+      return state;
   }
 
   return state;

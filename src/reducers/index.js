@@ -4,6 +4,8 @@ import authReducer from './auth_reducer';
 import userReducer from './user_reducer';
 import communicationReducer from './communication_reducer';
 import customerReducer from './customer_reducer';
+import challengeReducer from "./challenge"
+import organizationReducer from "./organization"
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -11,6 +13,8 @@ const rootReducer = combineReducers({
   user: userReducer,
   communication: communicationReducer,
   customer: customerReducer,
+  challenge: challengeReducer,
+  organization: organizationReducer
 });
 
 export default rootReducer;

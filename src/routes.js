@@ -7,18 +7,18 @@ import NotFoundPage from "./components/pages/not-found-page";
 import HomePage from "./components/pages/home-page";
 import ContactPage from "./components/pages/contact-page";
 import ComponentSamplesPage from "./components/pages/component-samples";
-import Challenge from "./components/pages/challenge"
+import Organization from "./containers/organization";
 
 // Import authentication related pages
-import Register from "./components/auth/register";
-import RegisterOrg from "./components/auth/register_org";
-import Login from "./components/auth/login";
-import Logout from "./components/auth/logout";
-import ForgotPassword from "./components/auth/forgot_password";
-import ResetPassword from "./components/auth/reset_password";
+import Register from "./containers/auth/register";
+import RegisterOrg from "./containers/auth/register_org";
+import Login from "./containers/auth/login";
+import Logout from "./containers/auth/logout";
+import ForgotPassword from "./containers/auth/forgot_password";
+import ResetPassword from "./containers/auth/reset_password";
 
 // Import dashboard pages
-import Dashboard from "./components/dashboard/dashboard";
+import Dashboard from "./containers/dashboard";
 import ViewProfile from "./components/dashboard/profile/view-profile";
 import Inbox from "./components/dashboard/messaging/inbox";
 import Conversation from "./components/dashboard/messaging/conversation";
@@ -32,7 +32,7 @@ import InitialCheckout from "./components/billing/initial-checkout";
 import AdminDashboard from "./components/admin/dashboard";
 
 // Import higher order components
-import RequireAuth from "./components/auth/require_auth";
+import RequireAuth from "./containers/auth/require_auth";
 
 const Routes = () => (
   <div className="layout">
@@ -49,10 +49,14 @@ const Routes = () => (
       <Route path="/logout" component={Logout} />
       <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/reset-password/:resetToken" component={ResetPassword} />
-      <Route path="/challenge" component={Challenge} />
+
+      <Route path="/organization/:id" component={Organization} />
 
       <Route path="/checkout/:plan" component={RequireAuth(InitialCheckout)} />
-      <Route path="/billing/settings" component={RequireAuth(BillingSettings)} />
+      <Route
+        path="/billing/settings"
+        component={RequireAuth(BillingSettings)}
+      />
       <Route path="/profile" component={RequireAuth(ViewProfile)} />
 
       <Route path="/admin" component={RequireAuth(AdminDashboard)} />
@@ -71,4 +75,4 @@ const Routes = () => (
   </div>
 );
 
-export default Routes
+export default Routes;

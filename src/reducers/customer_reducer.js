@@ -1,6 +1,13 @@
-import { CREATE_CUSTOMER, BILLING_ERROR, FETCH_CUSTOMER, CANCEL_SUBSCRIPTION, CHANGE_SUBSCRIPTION, UPDATE_BILLING } from '../actions/types';
+import {
+  CREATE_CUSTOMER,
+  BILLING_ERROR,
+  FETCH_CUSTOMER,
+  CANCEL_SUBSCRIPTION,
+  CHANGE_SUBSCRIPTION,
+  UPDATE_BILLING,
+} from "../actions/types";
 
-const INITIAL_STATE = { message: '', error: '', customer: {} };
+const INITIAL_STATE = { message: "", error: "", customer: {} };
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -16,6 +23,8 @@ export default function (state = INITIAL_STATE, action) {
       return { ...state, message: action.payload.message };
     case BILLING_ERROR:
       return { ...state, error: action.payload };
+    default:
+      return state;
   }
 
   return state;

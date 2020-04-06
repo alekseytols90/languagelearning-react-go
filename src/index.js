@@ -13,7 +13,7 @@ import * as serviceWorker from "./serviceWorker";
 import { AUTH_USER } from "./actions/types";
 import history from "./history";
 // import stylesheets
-import "./index.scss";
+import "./styles/index.scss";
 import "antd/dist/antd.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
