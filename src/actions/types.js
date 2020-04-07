@@ -11,7 +11,8 @@ export const AUTH_USER = "auth_user",
 //= =====================
 // User Profile Actions
 //= =====================
-export const FETCH_USER = "fetch_user";
+export const FETCH_USER = "fetch_user",
+  UPDATE_USER_PROFILE = "update_user_profile";
 export const ERROR_RESPONSE = "error_response";
 
 //= =====================
@@ -35,6 +36,16 @@ export const FETCH_ORGANIZATION = "fetch_organization",
   DELETE_ORGANIZATION = "delete_organization",
   ORGANIZATION_ERROR = "organization_error",
   SET_CURRENT_ORGANIZATION = "set_current_organization";
+
+//= =====================
+// Language, Skill, Interest Actions
+//= =====================
+export const FETCH_LANGUAGE_LIST = "fetch_language_list",
+  FETCH_SKILL_LIST = "fetch_skill_list",
+  FETCH_INTEREST_LIST = "fetch_interest_list",
+  LANGUAGE_ERROR = "language_error",
+  SKILL_ERROR = "skill_error",
+  INTEREST_ERROR = "interest_error";
 
 //= =====================
 // Messaging Actions
