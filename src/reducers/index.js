@@ -1,11 +1,12 @@
-import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
-import authReducer from './auth_reducer';
-import userReducer from './user_reducer';
-import communicationReducer from './communication_reducer';
-import customerReducer from './customer_reducer';
-import challengeReducer from "./challenge"
-import organizationReducer from "./organization"
+import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
+import authReducer from "./auth";
+import userReducer from "./user";
+import communicationReducer from "./communication";
+import customerReducer from "./customer";
+import challengeReducer from "./challenge";
+import organizationReducer from "./organization";
+import profileReducer from "./profile";
 
 const rootReducer = combineReducers({
   form: formReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   communication: communicationReducer,
   customer: customerReducer,
   challenge: challengeReducer,
-  organization: organizationReducer
+  organization: organizationReducer,
+  profile: profileReducer,
 });
 
 export default rootReducer;

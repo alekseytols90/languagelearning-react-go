@@ -1,9 +1,10 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import { List, Input, Avatar } from "antd";
+import { List, Input, Avatar, Card } from "antd";
 
 const { Search } = Input;
+const { Meta } = Card;
 
 const Challenges = (props) => (
   <div className="list-view">
@@ -11,19 +12,19 @@ const Challenges = (props) => (
     <Link className="btn list-view-btn" to="#" onClick={props.onClickCreate}>
       Create New Challenge
     </Link>
-    <List
-      itemLayout="horizontal"
-      dataSource={props.challenges}
-      renderItem={(item) => (
-        <List.Item className="challenge_item">
-          <List.Item.Meta
-            title={item.challenge_name}
-            description={item.description}
-            onClick={() => props.onClickChallenge(item)}
-          />
-        </List.Item>
-      )}
-    />
+    <Row>
+      {props.challenges.map((item, index) => {
+        return (
+          <Card className="homepage-card" key={index}>
+            <Meta
+              title={item.challenge_name}
+              description={item.description}
+              onClick={() => props.onClickChallenge(item)}
+            />
+          </Card>
+        );
+      })}
+    </Row>
   </div>
 );
 
@@ -48,13 +49,9 @@ const Users = (props) => (
       itemLayout="horizontal"
       dataSource={props.users}
       renderItem={(item) => (
-        <List.Item>
-          <List.Item.Meta
-            title={item.userName}
-            description={item.email}
-            avatar={<Avatar src={item.avatar} />}
-          />
-        </List.Item>
+        <Card className="homepage-card name">
+          <Meta title={item.userName} avatar={<Avatar src={item.avatar} />} />
+        </Card>
       )}
     />
   </div>
@@ -62,11 +59,11 @@ const Users = (props) => (
 
 const Homepage = (props) => {
   return (
-    <Row className="p-5 m-0 mt-5">
-      <Col md={6} sm={12}>
+    <Row className="p-5 m-0">
+      <Col md={8} sm={12}>
         <Challenges {...props} />
       </Col>
-      <Col md={6} sm={12}>
+      <Col md={4} sm={12}>
         <Users {...props} />
       </Col>
     </Row>

@@ -10,6 +10,7 @@ import {
   createChallenge,
   updateChallenge,
 } from "../actions/challenge";
+
 import orgLogo from "../assets/dummyImg/sample_logo.jpg";
 
 import Header from "../components/template/header";
@@ -43,7 +44,7 @@ class Organization extends Component {
     });
   };
 
-  componentDidMount() {
+  componentDidMount = () => {
     const {
       match,
       organization,
@@ -64,7 +65,7 @@ class Organization extends Component {
       getOrganization(id);
     }
     listChallenge(id);
-  }
+  };
 
   onClickChallenge = (challenge) => {
     this.setState({ isCreate: true, curChallenge: challenge });

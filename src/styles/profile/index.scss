@@ -1,0 +1,47 @@
+@import "./stage-bar.scss";
+@import "./footer-button.scss";
+
+.profile {
+  padding: 40px;
+  height: 100vh;
+
+  .step {
+    padding: 0 10% 0 10%;
+    margin: 5% 10% 0 10%;
+    .ant-list-item-meta-title {
+      font-size: 20px !important;
+    }
+    .ant-list-item-meta-description {
+      font-size: 17px !important;
+    }
+    .org-list-card {
+      margin: 10px 16px 10px 0px;
+      border-radius: 10px;
+      background: rgb(249, 249, 249);
+      &:active,
+      &:hover {
+        box-shadow: 5px 5px 10px;
+      }
+    }
+  }
+  .ant-upload.ant-upload-select-picture-card {
+    width: 150px;
+    height: 150px;
+  }
+  .site-tag-plus {
+    background: #fff;
+    border-style: dashed;
+    & svg{
+      vertical-align: unset !important;
+    }
+  } 
+  .site-tag-check {
+    background: green;
+    color: #fff;
+    
+    border-radius: 5px;
+    & svg{
+      vertical-align: unset !important;
+    }
+  }
+}

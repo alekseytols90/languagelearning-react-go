@@ -24,6 +24,23 @@ export function fetchUser(uid) {
   };
 }
 
+export function updateUserProfile(data) {
+  return function (dispatch) {
+    axios
+      .post(`${API_URL}/user`, {
+        headers: { Authorization: cookie.load("token") },
+        data
+      })
+      .then((response) => {
+        dispatch({
+          type: FETCH_USER,
+          payload: response.data.user,
+        });
+      })
+      .catch((response) => dispatch(errorHandler(response.data.error)));
+  };
+}
+
 export function errorHandler(dispatch, error, type) {
   console.log("Error type: ", type);
   console.log(error);

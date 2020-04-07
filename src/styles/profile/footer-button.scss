@@ -1,0 +1,25 @@
+.footer-button {
+  cursor: pointer;
+  text-align: end;
+  margin: 10% 20%;
+}
+
+.next-button {
+  position: relative; /* this was a key property missing from your code */
+  background-color: #77a942;
+  display: inline-block;
+  padding: 10px 10px 10px 30px; /* tweaked this */
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.next-button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent;
+  border-left: 15px solid #77a942;
+  border-bottom: 24px solid transparent;
+  margin: -10px 90px 0 10px;
+}

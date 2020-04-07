@@ -1,0 +1,87 @@
+#status {
+  position: relative;
+  width: auto;
+  // height: 140px;
+  text-align: center;
+  // left: 40px;
+}
+
+.status li {
+  /* Added this and moved much code to here */
+  position: relative; /* this was a key property missing from your code */
+  text-indent: 10px;
+  background-color: #77a942;
+  display: inline-block;
+  /* Dirty IE Hack */
+  zoom: 1;
+  // display: inline;
+  /* margin-right: 30px; Eliminated this */
+  margin-left: 20px;
+  padding: 10px 10px 10px 30px; /* tweaked this */
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  // line-height: 140px;
+}
+
+ul.status {
+  /* this was irrelevant with the HTML you gave, but I added the class to the ul */
+  list-style: none;
+  padding: 0;
+}
+
+/* tweaked various things below here */
+
+li.status:first-child:after,
+li.good:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent;
+  border-left: 15px solid #77a942;
+  border-bottom: 24px solid transparent;
+  margin: -10px 90px 0 10px;
+}
+li.bad:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent;
+  border-left: 15px solid #4266a9;
+  border-bottom: 24px solid transparent;
+  margin: -10px 90px 0 10px;
+}
+
+li.status:last-child:before,
+li.good:before,
+li.bad:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  border-top: 24px solid transparent;
+  border-left: 15px solid white;
+  border-bottom: 24px solid transparent;
+  margin: -10px 0px 0 0px;
+}
+
+li.status:first-child {
+  padding-left: 10px;
+  margin-left: 0;
+}
+li.status:last-child {
+  padding-right: 30px;
+  background-color: #4266a9;
+}
+
+li.good {
+  background-color: #77a942;
+  margin-top: 10px;
+}
+li.bad {
+  background-color: #4266a9;
+  margin-top: 10px;
+}

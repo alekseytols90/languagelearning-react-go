@@ -20,7 +20,7 @@ import QRRegister from "./containers/auth/qr_register";
 
 // Import dashboard pages
 import Dashboard from "./containers/dashboard";
-import ViewProfile from "./components/dashboard/profile/view-profile";
+import Profile from "./containers/profile";
 import Inbox from "./components/dashboard/messaging/inbox";
 import Conversation from "./components/dashboard/messaging/conversation";
 import ComposeMessage from "./components/dashboard/messaging/compose-message";
@@ -59,7 +59,7 @@ const Routes = () => (
         path="/billing/settings"
         component={RequireAuth(BillingSettings)}
       />
-      <Route path="/profile" component={RequireAuth(ViewProfile)} />
+      <Route path="/profile" component={RequireAuth(Profile)} />
 
       <Route path="/admin" component={RequireAuth(AdminDashboard)} />
       <Route exact path="/dashboard" component={RequireAuth(Dashboard)} />
