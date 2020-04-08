@@ -4,7 +4,6 @@ import { List, Input, Avatar, Card } from "antd";
 
 import orgLogo from "../../assets/dummyImg/sample_logo.jpg";
 
-let node;
 const { Search } = Input;
 const { Meta } = Card;
 
