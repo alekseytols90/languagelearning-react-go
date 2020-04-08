@@ -1,8 +1,8 @@
 @import "./base.scss";
 @import "./pages.scss";
 @import "./auth.scss";
-@import "./organization.scss";
-@import "./profile/index.scss";
+@import "./organization/index.scss";
+@import "~bootstrap/scss/bootstrap";
 
 body {
   margin: 0;

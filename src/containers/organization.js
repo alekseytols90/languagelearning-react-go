@@ -10,7 +10,6 @@ import {
   createChallenge,
   updateChallenge,
 } from "../actions/challenge";
-
 import orgLogo from "../assets/dummyImg/sample_logo.jpg";
 
 import Header from "../components/template/header";
@@ -44,7 +43,7 @@ class Organization extends Component {
     });
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     const {
       match,
       organization,
@@ -65,7 +64,7 @@ class Organization extends Component {
       getOrganization(id);
     }
     listChallenge(id);
-  };
+  }
 
   onClickChallenge = (challenge) => {
     this.setState({ isCreate: true, curChallenge: challenge });
@@ -88,7 +87,7 @@ class Organization extends Component {
       <React.Fragment>
         <Header />
         <div className="homepage">
-          <div className="hompage-title mt-4 p-2 mb-5">
+          <div className="hompage-title p-2 mb-5">
             <h4>Organization Home Page</h4>
           </div>
           <Mark orgLogo={orgLogo} orgName={curOrg.org_name} />

@@ -38,11 +38,6 @@ class HeaderTemplate extends Component {
                 <NavLink href="/dashboard">Dashboard</NavLink>
               </NavItem>
             )}
-            {authenticated && (
-              <NavItem>
-                <NavLink href="/profile">Profile</NavLink>
-              </NavItem>
-            )}
           </Nav>
           <Nav navbar>
             {authenticated && (

@@ -16,7 +16,7 @@ class HomePage extends Component {
               <img src={ImgFt} alt="FT" />
             </Col>
             <Col>
-              <img src={ImgHack} alt="Hackathon" />
+              <a href="/Global-Legal"><img src={ImgHack} alt="Hackathon" /></a> 
             </Col>
           </Row>
           <Link className="covid-btn covid-primary" to="/register-org">

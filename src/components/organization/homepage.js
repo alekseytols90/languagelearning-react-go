@@ -1,30 +1,29 @@
 import React from "react";
 import { Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
-import { List, Input, Avatar, Card } from "antd";
+import { List, Input, Avatar } from "antd";
 
 const { Search } = Input;
-const { Meta } = Card;
 
 const Challenges = (props) => (
   <div className="list-view">
-    <h4>{props.name}&nbsp;Challenges</h4>
+    <h4>{props.name}&nbsp;Challenges:</h4>
     <Link className="btn list-view-btn" to="#" onClick={props.onClickCreate}>
       Create New Challenge
     </Link>
-    <Row>
-      {props.challenges.map((item, index) => {
-        return (
-          <Card className="homepage-card" key={index}>
-            <Meta
-              title={item.challenge_name}
-              description={item.description}
-              onClick={() => props.onClickChallenge(item)}
-            />
-          </Card>
-        );
-      })}
-    </Row>
+    <List
+      itemLayout="horizontal"
+      dataSource={props.challenges}
+      renderItem={(item) => (
+        <List.Item className="challenge_item">
+          <List.Item.Meta
+            title={item.challenge_name}
+            description={item.description}
+            onClick={() => props.onClickChallenge(item)}
+          />
+        </List.Item>
+      )}
+    />
   </div>
 );
 
@@ -49,21 +48,30 @@ const Users = (props) => (
       itemLayout="horizontal"
       dataSource={props.users}
       renderItem={(item) => (
-        <Card className="homepage-card name">
-          <Meta title={item.userName} avatar={<Avatar src={item.avatar} />} />
-        </Card>
+        <List.Item>
+          <List.Item.Meta
+            title={item.userName}
+            description={item.email}
+            avatar={<Avatar src={item.avatar} />}
+          />
+        </List.Item>
       )}
     />
   </div>
 );
-
+//kh const list =[{grade: 2},{grade: 3},{grade: 5}];
 const Homepage = (props) => {
   return (
-    <Row className="p-5 m-0">
-      <Col md={8} sm={12}>
+    <Row className="p-5 m-0 mt-5">
+      <Col md={6} sm={12}>
+        {/* { //kh
+          list.map((item)=>{
+            return <Challenges {...props} grade={item.grade}/>
+          })
+        } */}
         <Challenges {...props} />
       </Col>
-      <Col md={4} sm={12}>
+      <Col md={6} sm={12}>
         <Users {...props} />
       </Col>
     </Row>

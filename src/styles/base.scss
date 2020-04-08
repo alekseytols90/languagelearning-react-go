@@ -42,3 +42,80 @@
 .flex {
   display: flex;
 }
+
+//kh
+.hk-header-image{
+  padding-top: 42px;
+
+}
+.customcard{
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 8px;
+    text-align: center;
+    margin-left: 0px;
+}
+.participant{
+    // width: 100%;
+    // background: #ffffff;
+    // border-radius: 14px;
+    padding: 15px;
+    // margin: 8px;
+    // margin-left: 0px;
+
+}
+.participant_dashboard{
+  width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 8px;
+    margin-left: 0px;
+
+}
+.challenge{
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    margin: 5px;
+
+}
+
+.hk_button{
+    width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 15px;
+    margin-left: 15px;
+    width: fit-content;
+    background-image: linear-gradient(rgb(64, 70, 104), rgb(21, 29, 77), rgb(26, 36, 93));
+    color: white;
+    text-align: center;
+    border: none;
+
+}
+
+.bottom_todo{
+  height: 400px;
+  background-image: linear-gradient(#404668, #151d4d, #1a245d);
+  color: white;
+}
+
+.legal_back{
+  background-image: linear-gradient(0deg, #ebebeb, transparent);
+}  
+
+.participant_image{
+    width: 27px;
+    border-radius: 20px;
+}
+
+.option_btn{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 7px;
+    margin: 0px;
+}
